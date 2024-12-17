@@ -1,0 +1,456 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #ff5733, #c4412f);
+    padding: 15px 20px;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.search-bar {
+    display: flex;
+    background: #fff;
+    border-radius: 25px;
+    padding: 8px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar i {
+    color: #ff5733;
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner:hover img {
+    transform: scale(1.1);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.banner-text p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Categorias */
+.categories {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.categories h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-buttons button {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.category-buttons button:hover {
+    transform: translateY(-5px);
+    background-color: #c4412f;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-buttons button i {
+    font-size: 18px;
+}
+
+/* Ofertas */
+.offers {
+    text-align: center;
+    background-color: #ffe6e6;
+    padding: 30px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.offers:hover {
+    background-color: #ffcccc;
+}
+
+.offers h2 {
+    color: #ff5733;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.offers p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Destaques */
+.destaques {
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+.destaques h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.product-card p {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #ff5733;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer button:hover {
+    color: #ffe6e6;
+}
+
+footer button i {
+    font-size: 20px;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 1440px) {
+    /* Para telas de laptops grandes e tablets grandes */
+    .banner-text h1 {
+        font-size: 28px;
+    }
+
+    .product-card {
+        width: 220px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Para tablets e telas médias */
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        width: 200px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Para smartphones grandes e tablets pequenos */
+    .category-buttons button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .banner-text h1 {
+        font-size: 26px;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        width: 180px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Para smartphones pequenos */
+    .category-buttons button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .banner-text h1 {
+        font-size: 24px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .product-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .offers h2 {
+        font-size: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    footer button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para dispositivos móveis muito pequenos */
+    .banner-text h1 {
+        font-size: 22px;
+    }
+
+    .product-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .category-buttons button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    footer button {
+        font-size: 12px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #ff5733;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    flex-direction: row; /* Garantir que os botões fiquem um ao lado do outro */
+}
+
+footer button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer button:hover {
+    color: #ffe6e6;
+}
+
+footer button i {
+    font-size: 20px;
+}
+
+/* Ajuste para telas menores (tablets) */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: row; /* Manter os botões lado a lado em tablets */
+        padding: 10px 0;
+    }
+
+    footer button {
+        font-size: 14px;
+    }
+}
+
+/* Ajuste para celulares com telas pequenas (375px de largura) */
+@media (max-width: 375px) {
+    footer {
+        flex-direction: row; /* Continuar alinhamento horizontal em dispositivos de 375px */
+        padding: 10px 5px;
+        justify-content: space-between; /* Garantir que os botões não fiquem muito juntos */
+    }
+
+    footer button {
+        font-size: 14px;
+    }
+
+    footer button i {
+        font-size: 18px;
+    }
+}
+
+/* Ajuste para telas menores que 375px (ex: alguns smartphones pequenos) */
+@media (max-width: 320px) {
+    footer {
+        flex-direction: row;
+        padding: 8px 5px;
+    }
+
+    footer button {
+        font-size: 12px;
+    }
+
+    footer button i {
+        font-size: 16px;
+    }
+}
