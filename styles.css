@@ -1,0 +1,234 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 1rem;
+  }
+  
+  /* Cabeçalho */
+  header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  /* Itens do Pedido */
+  .pedido-itens {
+    margin-bottom: 1.5rem;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .info-item {
+    flex: 1;
+    margin-left: 1rem;
+  }
+  
+  .info-item h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-item p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .btn-remover {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-remover:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Observação */
+  .observacao {
+    margin-bottom: 1.5rem;
+  }
+  
+  .observacao label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .observacao textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    resize: none;
+  }
+  
+  /* Endereço */
+  .endereco {
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .endereco h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .endereco p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .alterar-endereco {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #ff5722;
+    text-decoration: none;
+    margin-top: 0.5rem;
+  }
+  
+  .alterar-endereco:hover {
+    text-decoration: underline;
+  }
+  
+  /* Resumo do Pedido */
+  .resumo-pedido {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resumo-pedido p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+  
+  .resumo-pedido h3 {
+    text-align: right;
+    font-size: 1.2rem;
+    color: #ff5722;
+    font-weight: 700;
+  }
+  
+  /* Botão Finalizar */
+  .btn-finalizar {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff5722;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-finalizar:hover {
+    background-color: #e64a19;
+    transform: scale(1.02);
+  }
+
+  /* Estilo geral do footer */
+/* Footer Geral */
+.footer {
+  position: relative; /* Fixa o footer na parte inferior */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura da tela */
+  background-color: #ff5722; /* Cor de fundo principal */
+  margin-top: 10px;
+  display: flex; /* Flexbox para organizar os itens */
+  justify-content: space-around; /* Espaçamento uniforme entre os links */
+  align-items: center;
+  padding: 0.8rem 0; /* Espaçamento interno */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2); /* Sombra no topo do footer */
+  z-index: 1000; /* Garante que o footer fique acima de outros elementos */
+}
+
+.footer-link {
+  text-decoration: none; /* Remove o sublinhado */
+  color: #ffffff; /* Cor do texto e dos ícones */
+  display: flex; /* Organiza ícones e texto */
+  flex-direction: column; /* Ícone em cima, texto embaixo */
+  align-items: center; /* Centraliza os itens no eixo vertical */
+  font-size: 0.9rem; /* Tamanho do texto */
+  transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.footer-link:hover {
+  color: #ffd6c0; /* Muda a cor ao passar o mouse */
+}
+
+.footer-link i {
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  margin-bottom: 0.2rem; /* Espaçamento entre ícone e texto */
+}
+
+/* Para garantir responsividade em diferentes tamanhos */
+@media (max-width: 768px) {
+  .footer {
+      padding: 1rem 0; /* Ajusta o padding para dispositivos menores */
+  }
+  .footer-link i {
+      font-size: 1.3rem; /* Reduz um pouco o tamanho do ícone */
+  }
+  .footer-link span {
+      font-size: 0.8rem; /* Diminui o texto */
+  }
+}
